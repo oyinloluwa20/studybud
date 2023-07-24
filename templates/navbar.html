@@ -7,19 +7,28 @@
     <title>Studybud</title>
 </head>
 
+
 <body>
     <nav>
-        <a href="/">
-            <h1>LOLU.AI</h1>
-        </a>
-        <li>Home</li>
-        <li>About</li>
-        <li>Services</li>
-        <li>Team</li>
-        <li>Contact us</li>
+        <div style="display: grid; grid-template-columns: 1fr 3fr;"><a href="/">
+                <h1>LOLU.AI</h1>
+            </a>
+            <ul style="display: flex; list-style-type: none; justify-content: space-between;">
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Team</li>
+                <li>Contact us</li>
+            </ul>
+        </div>
+        <div>
+            <form action="{%url 'home'%}" method="get">
+                <input type="text" name="q" placeholder="Search rooms...">
+            </form>
+            <a href="{% url 'login'%}">Login</a>
+        </div>
     </nav>
-    <hr style="background-color: cornflowerblue; padding: 1px; align-items: left; border: none; width: 500px;">
-    <hr style="background-color: blue; padding: 1px; border: none;">
+    <hr style="background-color: cornflowerblue; padding: 1px;  border: none; ">
 </body>
 
 </html>
